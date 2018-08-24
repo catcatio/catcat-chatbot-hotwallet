@@ -1,0 +1,8 @@
+[{
+    "name": "catcat-chatbot-hotwallet",
+    "script": "nodemon_bootstrap.js",
+    "instances": "1",
+    "env": {
+      "NODE_ENV": "production"
+    }
+}]
