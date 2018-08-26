@@ -16,7 +16,7 @@ WORKDIR /usr/app
 
 # Install app dependencies
 ENV NPM_CONFIG_LOGLEVEL warn
-RUN npm i -g nodemon \
+RUN npm i -g nodemon typescript \
     && pm2 install pm2-logrotate \
     && pm2 set pm2-logrotate:max_size 10M \
     && pm2 set pm2-logrotate:compress true \
