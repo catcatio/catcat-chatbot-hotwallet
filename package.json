@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc -w",
-    "dev": "nodemon .",
+    "dev": "node nodemon_bootstrap",
     "lint": "tslint .",
     "build:dev": "concurrently npm:build npm:dev"
   },
