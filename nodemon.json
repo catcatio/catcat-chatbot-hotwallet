@@ -16,5 +16,6 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "ext": "js,json"
+    "ext": "js,json",
+    "delay": "1500"
   }

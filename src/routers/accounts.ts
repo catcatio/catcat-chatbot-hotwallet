@@ -1,4 +1,4 @@
-const { Keypair } = require('stellar-base')
+import { Keypair } from 'stellar-base'
 
 const isPublickeyValid = (key) => {
   try {
@@ -9,11 +9,12 @@ const isPublickeyValid = (key) => {
   }
 }
 
-module.exports = (config) => {
+export default (config) => {
   return async (request, response) => {
     const accountId = request.params.account_id
-    console.log(`account: ${accountId}`)
-    if (!accountId || !isPublickeyValid(accountId)) {
+    const isValid = isPublickeyValid(accountId)
+    console.log(`accounts: ${isValid ? '✅': '🔴'}  ${accountId}`)
+    if (!isValid) {
       return response.status(400).send('invalid account id')
     }
 
