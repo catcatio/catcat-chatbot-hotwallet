@@ -4,6 +4,12 @@ ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV NPM_CONFIG_LOGLEVEL warn
 
+RUN apk add --no-cache \
+    build-base \
+    g++ \
+    python \
+    curl
+
 # Install PM2
 RUN pm2 install typescript \
     && pm2 install pm2-logrotate \
