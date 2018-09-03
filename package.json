@@ -5,9 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc -w",
-    "dev": "node nodemon_bootstrap",
-    "lint": "tslint .",
-    "build:dev": "concurrently npm:build npm:dev"
+    "dev": "nodemon .",
+    "lint": "tslint ."
   },
   "repository": {
     "type": "git",
@@ -23,16 +22,15 @@
   "dependencies": {
     "@rabbotio/noconsole": "^1.1.0",
     "body-parser": "^1.18.3",
-    "concurrently": "^4.0.1",
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
-    "nodemon": "^1.18.3",
     "stellar-base": "^0.8.3"
   },
   "devDependencies": {
     "@types/express": "^4.16.0",
     "@types/node": "^10.9.2",
+    "nodemon": "^1.18.3",
     "tslint": "^5.11.0",
     "typescript": "^3.0.1"
   }
